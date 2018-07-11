@@ -23,7 +23,7 @@ export class GalleryComponent implements OnInit {
         this.CmsService.get(`gallery/galleryId_Get.php?idGallery=${this.idtresci}`).subscribe(
           response => {
             if (response !=null){
-                for(let i = 0; i < response.length; i++){
+                for(let i = 0; i < response['length']; i++){
                     this.imagesBasic.push({
                         'img': this.CmsService.uriGallery+`/${this.idtresci}/`+response[i].gallery_photo_name,
                         'thumb': this.CmsService.uriGallery+`/${this.idtresci}/thumb/`+response[i].gallery_photo_name,

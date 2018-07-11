@@ -39,6 +39,7 @@ export class PoolComponent implements OnInit {
                 if (response != null){
                     this.namePoll = response[0].poll_name;
                     this.event.klepsydraStop();
+
                     response.forEach(el=>{
                         this.questionPoll.push({poll_vote_id: el.poll_vote_id, poll_vote_name: el.poll_vote_name})
                         this.chartDatasets.push({data: [Number(el.poll_vote_votecount)],label: el.poll_vote_name})
@@ -62,6 +63,7 @@ export class PoolComponent implements OnInit {
                             response=>{
                                 this.event.klepsydraStop();
                                 this.chartDatasets.length = 0;
+
                                 response.forEach(el=>{
                                     this.chartDatasets.push({data: [Number(el.poll_vote_votecount)],label: el.poll_vote_name})
                                 })

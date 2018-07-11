@@ -15,7 +15,7 @@ export class NewsComponentView implements OnInit {
   tresc;
   idtresci;
   pageElement;
-  newsList: any[] = [];
+  newsList;
   newsGroupName: string = ''; 
   firstNews: any[] = [];
   readArticle: boolean = false; 

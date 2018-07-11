@@ -29,7 +29,7 @@ export class NewsletterComponent implements OnInit {
           this.CmsService.get(`template/newsletter/post.php?email=${this.email}`).subscribe(
                 response=>{
                     this.event.klepsydraStop();
-                    this.info = response.status;
+                    this.info = response[0].status;
                     this.infoVisible= true;
                 },
                 error =>{

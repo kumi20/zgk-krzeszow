@@ -25,6 +25,12 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy{
                 this.ngAfterViewInit();
             }
       });
+      
+      this.CmsService.get(`mbopn/getOfers.php`).subscribe(
+        response=>{
+            console.log('respone', response['length'])
+        }
+      )
   }
     
   ngAfterViewInit(){

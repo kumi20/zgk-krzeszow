@@ -21,7 +21,7 @@ export class ApiService {
   }
     
   get(uri){
-    return this._http.get(this.uri+uri)
+    return this._http.get<any[]|any>(this.uri+uri)
     .pipe(
         catchError((err, caught)=>{
             this.event.wyswietlInfo('error',err.message);
@@ -31,7 +31,7 @@ export class ApiService {
   }
     
   post(uri, json){      
-      return this._http.post<any>(this.uri+uri, json, {headers: {
+      return this._http.post<any[]|any>(this.uri+uri, json, {headers: {
           'AuthorizationToken':localStorage.getItem('userQumiToken')
       }})
       .pipe(
