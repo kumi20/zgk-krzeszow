@@ -1,35 +1,45 @@
 import { Injectable } from '@angular/core';
-import { Http, HttpModule, Headers} from '@angular/http';
-import 'rxjs/add/operator/map'; 
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
-import 'rxjs/add/operator/toPromise';
+import { catchError, map } from 'rxjs/operators';
+import { EventService } from './event.service';
 
 @Injectable()
 export class ApiService {
 
-  domanie = 'http://'; 
-  uri =  this.domanie + '/cms/';
+  domanie = 'http://kumi20.webd.pl'; 
+  uri =  this.domanie + '/api/mbopn/';
+    
     
   uriGallery = this.domanie + '/cms/assets/gallery';
 
   sourceImageNews = this.domanie + '/source/';
- 
-  headers:Headers = new Headers;    
 
-  constructor(private _http:Http) { 
-      this.headers.append('AuthorizationToken',localStorage.getItem('userQumiToken'));
+
+  constructor(private _http:HttpClient, public event: EventService) { 
+
   }
-
+    
   get(uri){
-    return this._http.get(this.uri+uri).map(
-        response => response.json()
+    return this._http.get(this.uri+uri)
+    .pipe(
+        catchError((err, caught)=>{
+            this.event.wyswietlInfo('error',err.message);
+            throw new Error(err.message)
+        })
     )
   }
     
-  post(uri, json){
-      return this._http.post(this.uri+uri,json).map(
-          response => response.json()
-      )
+  post(uri, json){      
+      return this._http.post<any>(this.uri+uri, json, {headers: {
+          'AuthorizationToken':localStorage.getItem('userQumiToken')
+      }})
+      .pipe(
+        catchError((err, caught)=>{
+            this.event.wyswietlInfo('error',err.message);
+            throw new Error(err.message)
+        })
+    )
   }    
 
 

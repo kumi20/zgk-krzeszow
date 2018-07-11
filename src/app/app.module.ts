@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, NO_ERRORS_SCHEMA, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HttpModule, Http, RequestOptions } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 import { MDBBootstrapModule } from './typescripts/free';
 import { MDBBootstrapModulePro } from './typescripts/pro/index';
 import { AppComponent } from './app.component';
@@ -31,6 +34,7 @@ import { TemplateModule } from './template/template.module';
 	],
 	imports: [
 		BrowserModule,
+        HttpClientModule,
         FormsModule,
         HttpModule,
         routerModule,
