@@ -27,9 +27,42 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+							{
+								"input": "node_modules/font-awesome/scss/font-awesome.scss"
+							},
+							{
+								"input": "node_modules/quill/dist/quill.core.css"
+							},
+							{
+								"input": "node_modules/quill/dist/quill.snow.css"
+							},
+							{
+								"input": "scss/bootstrap/bootstrap.scss"
+							},
+							{
+								"input": "scss/mdb.scss"
+							},
+							{
+								"input": "src/styles.scss"
+							}
+						],
+						"scripts": [
+							{
+								"input": "node_modules/chart.js/dist/Chart.js"
+							},
+							{
+								"input": "node_modules/quill/dist/quill.js"
+							},
+							{
+								"input": "node_modules/easy-pie-chart/dist/easypiechart.js"
+							},
+							{
+								"input": "node_modules/screenfull/dist/screenfull.js"
+							},
+							{
+								"input": "node_modules/hammerjs/hammer.min.js"
+							}
+						]
           },
           "configurations": {
             "production": {
