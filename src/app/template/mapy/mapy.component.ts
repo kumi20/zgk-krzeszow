@@ -21,28 +21,28 @@ export class MapyComponent implements OnInit {
 
   ngOnInit() {
       this.event.klepsydraStart();
-      this.CmsService.get(`template/mapy/getList.php?id=${this.idtresci}`).subscribe(
-        response=>{
-            
-            if (response != null){
-                response.forEach(el=>{
-                    this.markerList.push({
-                          lat: Number(el.map_szer),
-                          lng: Number(el.map_dlug),
-                          draggable: false,
-                          title: '',
-                          description: el.map_content
-                      });
-                })    
-                
-            }
-            this.event.klepsydraStop();
-        },
-          error=>{
-              this.event.klepsydraStop();
-              this.event.wyswietlInfo('error','Błąd pobierania danych');
-          }
-      )
+//      this.CmsService.get(`template/mapy/getList.php?id=${this.idtresci}`).subscribe(
+//        response=>{
+//            
+//            if (response != null){
+//                response.forEach(el=>{
+//                    this.markerList.push({
+//                          lat: Number(el.map_szer),
+//                          lng: Number(el.map_dlug),
+//                          draggable: false,
+//                          title: '',
+//                          description: el.map_content
+//                      });
+//                })    
+//                
+//            }
+//            this.event.klepsydraStop();
+//        },
+//          error=>{
+//              this.event.klepsydraStop();
+//              this.event.wyswietlInfo('error','Błąd pobierania danych');
+//          }
+//      )
   }
 
 }

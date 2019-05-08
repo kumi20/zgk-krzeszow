@@ -14,6 +14,10 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy{
   id: number = 1;
   private sub: any;
     
+  map = {
+    lat: 50.411334203925286,
+    lng: 22.34084897882076,
+  };    
     
   constructor(private CmsService: ApiService, private event: EventService, private route: ActivatedRoute, private _route: Router) { }
     

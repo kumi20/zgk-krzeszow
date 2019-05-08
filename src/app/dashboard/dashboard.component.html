@@ -1,12 +1,469 @@
-<div class="container">
-    <div class="row"><h1>Witam</h1></div>
-    <div class="row"><p>Kuba <i class="fa fa-address-book"></i>
+<!-- Main navigation -->
+<header>
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <mdb-navbar-brand>
+      <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>MDB</strong></a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active waves-light" mdbWavesEffect>
+          <a class="nav-link" href="#top" mdbPageScroll [pageScrollDuration]="1000">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link" href="#about" mdbPageScroll [pageScrollDuration]="1000">O nas</a>
+        </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link" href="#news" mdbPageScroll [pageScrollDuration]="1000">Aktualności</a>
+        </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link" href="#contact" mdbPageScroll [pageScrollDuration]="1000">Kontakt</a>
+        </li>
+      </ul>
+
+    </links>
+  </mdb-navbar>
+  <!-- Full Page Intro -->
+  <div class="view" style="background-image: url('../../assets/img/header.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row mt-5">
+          <!--Grid column-->
+          <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Numery alarmowe:</h1>
+            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+            <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">15 8798 304<br>15 8241 385 (sprawy związane z gospodarką odpadami)</h6>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5 mb-4">
+            <!--Form-->
+
+            <!--/.Form-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
+
+<main>
+    <section class="pb-5" id="about">
+        <div class="container">
+            <br>
+        <h2 class="h1 pt-4">O nas</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Zakład Gospodarki Komunalnej Sp. z o.o w Krzeszowie swoją działalność prowadzi od 01.01.2000r. Początkowo firma pod kierownictwem  pana Zdzisława Wałka,  prowadziła działalność w zakresie zaopatrzenia w wodę mieszkańców gminy, usług koparko- ładowarką, jak również dowózu dzieci do szkół. Wraz z upływem kolejnych lat firma znacznie poszerzała swoją działalność dzięki wybudowaniu składowisku odpadów komunalnych i innych niż niebezpieczne w Sigiełkach. W latach 2003-2004 zmianie uległa siedziba firmy, a stanowisko prezesa zarządu objął pan Roman Pydo. Powołana została także nowa Rada Nadzorcza Spółki. W skutek przeprowadzonych zmian znacznie wzrosła liczba obsługiwanych klientów oraz zasięg terytorialny świadczonych usług. Dzięki staraniom Spółki a także pomocy Gminy Krzeszów składowisko w Sigiełkach zostało rozbudowane o nową siedzibę i nowoczesną sortownię odpadów, wyposażoną w urządzenia służące do ich segregacji. Instalacja ta wpisuje się w Wojewódzki Plan Gospodarki Odpadami o statusie instalacji zastępczej. W przyszłości planowana jest również rozbudowa składowiska w nowoczesną instalację do biologicznego przetwarzania odpadów. W obecnym roku Zakład Gospodarki Komunalnej w Krzeszowie zatrudnia 39 osób pracujących w różnych działach jednostki.</p>
+            </div>
+        </div>
+        </div>
+    </section>
     
-    <button (click)="test()" class="btb btn-success">test</button>
+    
+    
+            <!--Section: Magazine v.2-->
+        <section class="magazine-section my-5" id="news">
+            <div class="container">
+                <br>
+          <!-- Section heading -->
+          <h2 class="h1 pt-4">Aktualności</h2>
 
-</p></div>
-</div>
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-6 col-md-12">
+
+              <!-- Featured news -->
+              <div class="single-news mb-lg-0 mb-4">
+
+                <!-- Image -->
+                <div class="overlay rounded z-depth-1-half mb-4">
+                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/1.jpg" alt="Sample image">
+                  <a>
+                    <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                  </a>
+                </div>
+
+                <!-- Data -->
+                <div class="news-data d-flex justify-content-between">
+                  <p class="font-weight-bold dark-grey-text"><i class="far fa-clock pr-2"></i>27/02/2018</p>
+                </div>
+
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold dark-grey-text mb-3" style="margin-top:-80px;">
+                  <a>Title of the news</a>
+                </h3>
+                <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus
+                  error sit
+                  voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                  explicabo.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+
+              </div>
+              <!-- Featured news -->
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-6 col-md-12">
+
+              <!-- Small news -->
+              <div class="single-news mb-4">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-3">
+
+                    <!--Image-->
+                    <div class="overlay rounded z-depth-1 mb-4">
+                      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" alt="Sample image">
+                      <a>
+                        <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-9">
+
+                    <!-- Excerpt -->
+                    <p class="font-weight-bold dark-grey-text">26/02/2018</p>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-11 text-truncate pl-0 mb-3">
+                        <a href="#!" class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus
+                          qui
+                          blanditiis</a>
+                      </div>
+                      <a>
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+              <!-- Small news -->
+
+              <!-- Small news -->
+              <div class="single-news mb-4">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-3">
+
+                    <!--Image-->
+                    <div class="overlay rounded z-depth-1 mb-4">
+                      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                        alt="Sample image">
+                      <a>
+                        <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-9">
+
+                    <!-- Excerpt -->
+                    <p class="font-weight-bold dark-grey-text">25/02/2018</p>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-11 text-truncate pl-0 mb-3">
+                        <a href="#!" class="dark-grey-text">Itaque earum rerum hic tenetur a sapiente delectus</a>
+                      </div>
+                      <a>
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+              <!-- Small news -->
+
+              <!-- Small news -->
+              <div class="single-news mb-4">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-3">
+
+                    <!--Image-->
+                    <div class="overlay rounded z-depth-1 mb-4">
+                      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/87.jpg" alt="Sample image">
+                      <a>
+                        <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-9">
+
+                    <!-- Excerpt -->
+                    <p class="font-weight-bold dark-grey-text">24/02/2018</p>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-11 text-truncate pl-0 mb-3">
+                        <a href="#!" class="dark-grey-text">Soluta nobis est eligendi optio cumque nihil impedit quo
+                          minus</a>
+                      </div>
+                      <a>
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+              <!-- Small news -->
+
+              <!-- Small news -->
+              <div class="single-news">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-3">
+
+                    <!--Image-->
+                    <div class="overlay rounded z-depth-1 mb-md-0 mb-4">
+                      <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image">
+                      <a>
+                        <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-9">
+
+                    <!-- Excerpt -->
+                    <p class="font-weight-bold dark-grey-text">23/02/2018</p>
+                    <div class="d-flex justify-content-between">
+                      <div class="col-11 text-truncate pl-0 mb-lg-3">
+                        <a href="#!" class="dark-grey-text">Duis aute irure dolor in reprehenderit in voluptate</a>
+                      </div>
+                      <a>
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+              <!-- Small news -->
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!-- Grid row -->
+            </div>
+        </section>
+        <!--Section: Magazine v.2-->
+    
+    
+        
+    <section class="pb-5"> 
+        <div class="streak streak-photo streak-long-2 mt-5" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg');">
+          <div class="flex-center mask rgba-black-light">
+            <div class="container">
+
+              <div class="row text-center">
+
+                <!--First column-->
+                <div class="col-md-3 mb-2">
+                    <i class="fa fa-calendar white-text mb-1 font-weight-bold" aria-hidden="true" style="font-size:52px"></i>  
+                    <p class="white-text text-uppercase mt-3">Harmonogram</p>
+                </div>
+                <!--/First column-->
+
+                <!--Second column-->
+                <div class="col-md-3 mb-2">
+                  <i class="fa fa-file-o white-text mb-1 font-weight-bold" aria-hidden="true" style="font-size:52px"></i>    
+                  <p class="white-text text-uppercase mt-3">Pliki do pobrania</p>
+                </div>
+                <!--/Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3 mb-2">
+                    <i class="fa fa-trash white-text mb-1 font-weight-bold" aria-hidden="true" style="font-size:52px"></i>                    
+                    <p class="white-text text-uppercase mt-3">Segregacja</p>
+                </div>
+                <!--/Third column-->
+
+                <!--Fourth column-->
+                <div class="col-md-3">
+                    <i class="fa fa-line-chart white-text mb-1 font-weight-bold" aria-hidden="true" style="font-size:52px"></i>
+                    <p class="white-text text-uppercase mt-3">Podaj stan licznika</p>
+                </div>
+                <!--/Fourth column-->
+
+              </div>
+              <!--First row-->
+            </div>
+
+          </div>
+        </div>
+    </section>      
+        
+    <!--Section: Contact v.1-->
+        <section class="pb-5" id="contact">
+          <div class="container">
+          <!--Section heading-->
+          <h2 class="h1 pt-4">Kontakt</h2>
+          <!--Section description-->
+          <div class="row">
+              <div class="col-md-6">
+                    <p class="pb-4" style="font-weight: bold; margin-top:20px;">
+                          ZAKŁAD GOSPODARKI KOMUNANLEJ Sp. z o. o.<br>
+                          Biłgorajska 16<br>
+                          37 - 418 Krzeszów
+                    </p>
+                  
+                    <p class="pb-5"><b>Godziny otwarcia:</b> Poniedziałek - Piatek 7<sup>00</sup> - 15<sup>00</sup>
+                        <br><br>
+                        Tel. 15 879 83 04<br>
+                        Fax. 15 879 87 91 <br>
+                        zgk@rz.com.pl
+                    </p>
+              </div>
+              
+              <div class="col-md-6">
+                    <p class="pb-4" style="font-weight: bold; margin-top:20px;">
+                          Sortownia oraz Składowisko Odpadów Komunalnych w Sigiełkach<br>
+                    </p>
+                  
+                    <p class="pb-5"><b>Godziny otwarcia:</b><br> Poniedziałek - Sobota 7<sup>00</sup> - 19<sup>00</sup> (firmy posiadające umowę)
+                        <br>
+                        Poniedziałek - Piątek 7<sup>00</sup> - 15<sup>00</sup> (klienci nie posiadający umowy)
+                         <br><br>
+                        Tel. 15 824 13 85<br>
+                        sortownia.sigielki@gmail.com
+                    </p>
+              </div>
+          </div>    
+          
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-5 my-4">
+
+              <!--Form with header-->
+              <mdb-card>
+
+                <mdb-card-body>
+                  <!--Header-->
+                  <div class="form-header blue accent-1">
+                    <h3>
+                      <i class="fas fa-envelope"></i> Napisz do nas:</h3>
+                  </div>
+
+                  <!--Body-->
+                  <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input  type="text" id="form3" class="form-control">
+                    <label for="form3">Your name</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input  type="text" id="form2" class="form-control">
+                    <label for="form2">Your email</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <input  type="text" id="form32" class="form-control">
+                    <label for="form34">Subject</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-pencil-alt prefix grey-text"></i>
+                    <textarea  type="text" id="form8" class="md-textarea"></textarea>
+                    <label for="form8">Icon Prefix</label>
+                  </div>
+
+                  <div class="text-center">
+                    <button  color="light-blue" class="waves-light" mdbWavesEffect>Submit</button>
+                  </div>
+
+                </mdb-card-body>
+
+              </mdb-card>
+              <!--Form with header-->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7">
+
+              <!--Google map-->
+              <agm-map class="z-depth-1-half map-container" style="height: 400px;" [latitude]="map.lat" [longitude]="map.lng">
+                <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+              </agm-map>
 
 
+            </div>
+            <!--Grid column-->
 
+          </div>
+        </div>
+        </section>
+        <!--Section: Contact v.1-->
+    
+    <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="http://zgk-krzeszow.pl/"> zgk-krzeszow.pl</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</main>

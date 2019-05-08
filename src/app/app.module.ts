@@ -26,6 +26,8 @@ import { DynamicComponentComponent } from './dynamic-component/dynamic-component
 import { WraperComponentComponent } from './wraper-component/wraper-component.component';
 import { TemplateModule } from './template/template.module';
 
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
 	declarations: [
@@ -47,6 +49,11 @@ import { TemplateModule } from './template/template.module';
         GoogleAnalyticsModule.forRoot(),
         MDBBootstrapModule.forRoot(),
         MDBBootstrapModulePro.forRoot(),
+        AgmCoreModule.forRoot({
+              // please get your own API key here:
+              // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+              apiKey: 'AIzaSyCWGwAYym9aNgPYwihVhdaB-pxnoE03-D4'
+            }) 
 	],
 	providers: [ApiService, EventService, AuthGuard],
 	bootstrap: [AppComponent],
