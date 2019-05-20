@@ -7,13 +7,13 @@ import { EventService } from './event.service';
 @Injectable()
 export class ApiService {
 
-  domanie = 'http://kumi20.webd.pl'; 
-  uri =  this.domanie + '/api/mbopn/';
+  domaine = 'http://kumi20.webd.pl/zgk/';    
+  //uri = this.domaine + 'apitest/cms/'; //api testowe
+  uri = this.domaine + 'api/cms/'; //api produkcyjne      
     
-    
-  uriGallery = this.domanie + '/cms/assets/gallery';
+  uriGallery = this.domaine + '/cms/assets/gallery';
 
-  sourceImageNews = this.domanie + '/source/';
+  sourceImageNews = this.domaine + '/source/';
 
 
   constructor(private _http:HttpClient, public event: EventService) { 
@@ -31,9 +31,7 @@ export class ApiService {
   }
     
   post(uri, json){      
-      return this._http.post<any[]|any>(this.uri+uri, json, {headers: {
-          'AuthorizationToken':localStorage.getItem('userQumiToken')
-      }})
+      return this._http.post<any[]|any>(this.uri+uri, json)
       .pipe(
         catchError((err, caught)=>{
             this.event.wyswietlInfo('error',err.message);

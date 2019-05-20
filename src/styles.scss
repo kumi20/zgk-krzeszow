@@ -24,7 +24,7 @@ header,
 }
 
 .top-nav-collapse {
-  background-color: #3f51b5 !important;
+  background-color: #111 !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -33,7 +33,7 @@ header,
 
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
-    background: #3f51b5 !important;
+    background: #111 !important;
   }
 }
 
@@ -55,3 +55,21 @@ h6 {
   line-height: 1.7;
 }
 
+.o-button--primary {
+    background: linear-gradient(#2e4e81, #0e1b2c);
+    color: #ffffff !important;
+}
+
+.modalek:hover{
+    cursor: pointer;
+}
+
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.navbar-toggler-icon{
+    cursor: pointer;
+}

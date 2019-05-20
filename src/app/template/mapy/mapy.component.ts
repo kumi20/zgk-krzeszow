@@ -15,34 +15,37 @@ export class MapyComponent implements OnInit {
   pageElement;
     
   markerList: any[] = [];
-  public map: any = { lat: 50.40340273848367, lng: 22.30135560035683 };
+  public map = {
+    lat: 50.411334203925286,
+    lng: 22.34084897882076,
+  };   
     
   constructor(private CmsService: ApiService, private route: ActivatedRoute, private _route: Router, private event: EventService) { }
 
   ngOnInit() {
       this.event.klepsydraStart();
-//      this.CmsService.get(`template/mapy/getList.php?id=${this.idtresci}`).subscribe(
-//        response=>{
-//            
-//            if (response != null){
-//                response.forEach(el=>{
-//                    this.markerList.push({
-//                          lat: Number(el.map_szer),
-//                          lng: Number(el.map_dlug),
-//                          draggable: false,
-//                          title: '',
-//                          description: el.map_content
-//                      });
-//                })    
-//                
-//            }
-//            this.event.klepsydraStop();
-//        },
-//          error=>{
-//              this.event.klepsydraStop();
-//              this.event.wyswietlInfo('error','Błąd pobierania danych');
-//          }
-//      )
+      this.CmsService.get(`template/mapy/getList.php?id=${this.idtresci}`).subscribe(
+        response=>{
+            
+            if (response != null){
+                response.forEach(el=>{
+                    this.markerList.push({
+                          lat: Number(el.map_szer),
+                          lng: Number(el.map_dlug),
+                          draggable: false,
+                          title: '',
+                          description: el.map_content
+                      });
+                })    
+                
+            }
+            this.event.klepsydraStop();
+        },
+          error=>{
+              this.event.klepsydraStop();
+              this.event.wyswietlInfo('error','Błąd pobierania danych');
+          }
+      )
   }
 
 }

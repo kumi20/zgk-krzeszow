@@ -1,6 +1,5 @@
 import {Component, Input,Type, ViewContainerRef, ViewChild, ReflectiveInjector, ComponentFactoryResolver, OnDestroy, ElementRef, ComponentRef, isDevMode, OnInit} from '@angular/core';
 
-import { StaticComponent } from '../template/static/static.component';
 import { NewsComponentView } from '../template/news/news.component';
 import { MenuParent } from '../template/menu/menu/menu.component';
 import { MapyComponent } from '../template/mapy/mapy.component';
@@ -9,6 +8,8 @@ import { PoolComponent } from '../template/pool/pool.component';
 import { GalleryComponent } from '../template/gallery/gallery.component';
 import { NewsletterComponent } from '../template/newsletter/newsletter.component';
 import { CalendarTemplateComponent } from '../template/calendar/calendar.component';
+
+import { StaticComponent } from '../template/static/static.component'
 
 @Component({
   selector: 'app-dynamic-component',
@@ -43,6 +44,6 @@ export class DynamicComponentComponent implements OnInit {
     componentRef.instance.pageElement = this.pageElement;
     //componentRef.instance.callMeFromParent;
     componentRef.changeDetectorRef.detectChanges();
-  }
-
+  }    
+    
 }

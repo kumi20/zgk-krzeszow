@@ -21,10 +21,12 @@ import { routerModule} from './app.routing';
 
 import { AuthGuard } from './auth.guard';
 
+import { TemplateModule } from './template/template.module';
+
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
 import { WraperComponentComponent } from './wraper-component/wraper-component.component';
-import { TemplateModule } from './template/template.module';
+
 
 import { AgmCoreModule } from '@agm/core';
 

@@ -28,16 +28,13 @@ export class CformTemplateComponent implements OnInit {
   }
     
     send(event){
-        if (event.email == '' || event.message == '') this.event.wyswietlInfo('info','Proszę podać email i treśc wiadomości');
+        if (!this.cform.valid) this.event.wyswietlInfo('info','Proszę uzupełnić wszystkie pola');
         else{
             this.event.klepsydraStart();
             this.CmsService.post(`template/cform/sendMail.php?id=${this.idtresci}`, event).subscribe(
                 response=>{
                     this.event.wyswietlInfo('success', 'Wiadomość została wysłana');
-                    this.cform.controls['name'].setValue("");
-                    this.cform.controls['email'].setValue("");
-                    this.cform.controls['message'].setValue("");
-                    this.cform.controls['subject'].setValue("");
+                    this.cform.reset();
                     this.event.klepsydraStop();
                 },
                 error =>{

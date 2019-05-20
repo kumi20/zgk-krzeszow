@@ -28,7 +28,9 @@ export class StaticComponent implements OnInit {
      this.CmsService.post('template/static/getStatic.php', json).subscribe(
          response => {
              if (response !=null){
+                 
                  this.tresc = response[0].static_content;
+                 if(document.getElementById(this.idModal) != null) document.getElementById(this.idModal).innerHTML = this.tresc; 
              }
            
             this.event.klepsydraStop();

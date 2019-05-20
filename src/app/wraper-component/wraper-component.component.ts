@@ -59,7 +59,6 @@ export class WraperComponentComponent implements OnInit {
             },
             error => this.event.klepsydraStop()
         )
-  
   }
   
   wyswietlKontrolki(){

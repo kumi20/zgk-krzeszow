@@ -35,6 +35,7 @@ export class NewsComponentView implements OnInit {
                this.firstNews.push(response[0]);
                this.newsList.splice(0,1);
                this.newsGroupName= response[0].news_group_name; 
+               console.log('lista newsow', this.newsList)
            }
             this.event.klepsydraStop();
         },
@@ -54,7 +55,7 @@ export class NewsComponentView implements OnInit {
                 this.news.news_pub_date = response[0].news_pub_date;
                 this.news.news_views = response[0].news_views;
                 this.event.klepsydraStop();
-                this.readArticle = true;
+                //this.readArticle = true;
             },
             error=>{
                 this.event.klepsydraStop();
